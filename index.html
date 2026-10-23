@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Profile</title>
+<meta name="description" content="Personal profile and portfolio.">
+<script>document.documentElement.dataset.skin="current";</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar" id="top">
+  <a class="brand" href="#home" id="brand">Your Name</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav aria-label="Main"><ul id="menu"></ul></nav>
+</header>
+<main id="main">
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="hi">Hello, I'm</p>
+        <h1 id="h-name"></h1>
+        <p class="lede" id="h-tag"></p>
+        <div class="btns"><a class="btn primary" id="btn-work" href="#projects">View my work</a><a class="btn ghost" href="#contact">Contact me</a></div>
+      </div>
+      <div class="photo" id="h-photo"></div>
+    </div>
+  </section>
+  <section id="about" class="sec"><div class="wrap"><h2>About me</h2><div id="a-bio" class="prose lead"></div>
+    <div id="a-exp"></div>
+    <div id="a-skills"></div>
+    <div id="a-edu"></div>
+    <div id="a-languages"></div>
+    <div id="a-int"></div>
+  </div></section>
+  <section id="projects" class="sec alt"><div class="wrap"><h2>Projects</h2><div id="project-groups"></div></div></section>
+  <section id="apps-websites" class="sec"><div class="wrap"><h2>Apps and website</h2><div class="grid" id="g-apps-websites"></div></div></section>
+  <section id="contact" class="sec alt"><div class="wrap"><h2>Contact</h2><div id="c-links"></div></div></section>
+</main>
+<dialog class="project-shot-dialog" id="project-shot-dialog" aria-label="Project screenshot preview">
+  <form method="dialog"><button class="project-shot-close" aria-label="Close screenshot preview">×</button></form>
+  <img id="project-shot-large" alt="">
+  <p id="project-shot-caption"></p>
+</dialog>
+<footer class="foot"><div class="wrap"><p id="foot"></p><a href="#home" id="back-to-top">Back to top</a></div></footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
