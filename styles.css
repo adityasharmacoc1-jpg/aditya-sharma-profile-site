@@ -232,3 +232,45 @@ body::before{display:none}
   .grid>.card{min-width:0;width:100%}
   .card-body{min-width:0}
 }
+
+
+/* Center the mobile page content */
+@media(max-width:700px){
+  main .wrap{text-align:center}
+  .hero-text{text-align:center}
+  .hero-text .lede{margin-inline:auto}
+  .hero-text .btns{justify-content:center}
+  main h2{text-align:center}
+  main h2::after{left:50%;transform:translateX(-50%)}
+  main .group h3{text-align:center}
+  main .prose,main .lead{margin-inline:auto}
+  .tags{justify-content:center}
+  .tl{border-left:0;padding-left:0;text-align:center}
+  .tl li::before{display:none}
+  .tl strong,.tl .meta{margin-inline:auto}
+  .details{margin-inline:auto;text-align:center}
+  .details div{justify-items:center}
+  .project-group-heading,.project-row-head{justify-content:center}
+  .project-subsection{text-align:center}
+  .project-item{flex-direction:column;align-items:center;text-align:center}
+  .project-item-body{width:100%;text-align:center}
+  .project-list{margin-left:0}
+  .project-item .btns,.card-body .btns{justify-content:center}
+  .card-body{align-items:center;text-align:center}
+  .contact-info,.links{justify-content:center}
+  .links{justify-items:center}
+  .foot .wrap{justify-content:center;text-align:center}
+}
+
+/* One-time entrance for the hero greeting and name */
+@keyframes hero-incoming{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:700px){
+  .hero-text .hi{animation:hero-incoming .62s cubic-bezier(.2,.8,.2,1) both}
+  html[data-skin=current] .hero-text h1{animation:hero-incoming .72s cubic-bezier(.2,.8,.2,1) .14s both!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-text .hi,html[data-skin=current] .hero-text h1{animation:none!important}
+}
