@@ -226,3 +226,9 @@ body::before{display:none}
   .project-subsection,.card,.project-shot{transition:none!important;transform:none!important}
   .bar{backdrop-filter:none}
 }
+
+@media(max-width:560px){
+  .grid{grid-template-columns:minmax(0,1fr);min-width:0}
+  .grid>.card{min-width:0;width:100%}
+  .card-body{min-width:0}
+}
