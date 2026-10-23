@@ -274,3 +274,9 @@ body::before{display:none}
 @media(prefers-reduced-motion:reduce){
   .hero-text .hi,html[data-skin=current] .hero-text h1{animation:none!important}
 }
+
+@media(max-width:700px){
+  .bar{display:grid;grid-template-columns:1fr auto 1fr}
+  .brand{grid-column:2;justify-self:center;flex:initial;max-width:calc(100vw - 108px);text-align:center}
+  .burger{grid-column:3;justify-self:end}
+}
