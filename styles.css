@@ -202,3 +202,27 @@ body::before{display:none}
   body{background:var(--bg);color:var(--text)}
   .alt{background:var(--alt)}
 }
+
+
+/* Dark theme: keep skill and interest labels readable on their chips */
+@media(prefers-color-scheme:dark){
+  html[data-skin=current] .tags li{color:#f1f6fa;background:#203442;border-color:#496172}
+  html[data-skin=current] .tags li:nth-child(3n+1){color:#e8ffff;background:#183b3d;border-color:#34797a}
+  html[data-skin=current] .tags li:nth-child(3n+2){color:#f0f2ff;background:#282f50;border-color:#596495}
+  html[data-skin=current] .tags li:nth-child(3n){color:#fff0e8;background:#49342f;border-color:#96634f}
+  html[data-skin=current] .project-subsection:nth-of-type(3n+1){background:linear-gradient(135deg,#1b303b,#204049)}
+  html[data-skin=current] .project-subsection:nth-of-type(3n+2){background:linear-gradient(135deg,#1d2c42,#303551)}
+  html[data-skin=current] .project-subsection:nth-of-type(3n){background:linear-gradient(135deg,#302d35,#493731)}
+}
+@media(max-width:700px){
+  html{scroll-behavior:auto}
+  html[data-skin=current] .photo,
+  html[data-skin=current] h1,
+  html[data-skin=current] h2,
+  html[data-skin=current] h3,
+  html[data-skin=current] h4,
+  html[data-skin=current] h5,
+  html[data-skin=current] .heading-icon{animation:none!important}
+  .project-subsection,.card,.project-shot{transition:none!important;transform:none!important}
+  .bar{backdrop-filter:none}
+}
