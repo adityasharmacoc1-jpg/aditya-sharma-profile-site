@@ -183,3 +183,22 @@ html[data-skin=current] .photo{border-color:rgba(255,255,255,.98);box-shadow:0 2
 body{background:var(--bg)}
 body::before{display:none}
 .alt{background:var(--alt);backdrop-filter:none}
+
+
+/* Mobile readability and alignment fixes */
+.rv{opacity:1;transform:none}
+@media(max-width:820px){.photo{justify-self:center;margin-inline:auto}}
+@media(prefers-color-scheme:dark){
+  html[data-skin=current]{
+    --bg:#101a24;
+    --alt:#172634;
+    --card:#1b2d3a;
+    --text:#f1f6fa;
+    --muted:#c1cfda;
+    --accent:#71d7df;
+    --accent-text:#06242a;
+    --line:#3a5060
+  }
+  body{background:var(--bg);color:var(--text)}
+  .alt{background:var(--alt)}
+}
